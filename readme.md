@@ -1,6 +1,6 @@
 # kag-heads-utils
 
-A small utility to work with and preview kag custom head files, requires love2d 11+
+A small utility to work with and preview kag custom head files, requires [LÖVE](https://love2d.org/) 11+
 
 Developed to render out batches of heads for rating and ensuring compilance of the first community head pack entries,
 but may be useful for previewing heads that you are working on.
@@ -21,6 +21,12 @@ Heads files in the correct format (see the examples in [kag-base](https://github
 Pre-packaged versions for some operating systems may be provided in future if needed, just ask.
 
 Archer attacking preview is missing as it requires multiple layered sprites and wasn't considered very important in this context.
+
+Basic animations could be good to preview rather than just still frames.
+
+Dynamic zoom based on window size (resizable window) could be good for highdpi screens.
+
+Pull requests welcome.
 
 ## License
 
@@ -51,5 +57,9 @@ SOFTWARE.
 **Assets: All Rights Reserved**
 
 ```
-Graphical assets are included for convenience in this repository, but may not be redistributed by 3rd parties.
+Graphical assets are included for convenience in this repository at the
+permission of THD. They remain the property of THD.
+
+These assets may not be redistributed by 3rd parties or used for any purpose
+other than as required for the use of this software.
 ```
