@@ -1,0 +1,26 @@
+body {
+	background: grey;
+	font-family: sans-serif;
+}
+
+img {
+	width: 576px;
+	image-rendering: crisp-edges;
+}
+
+#container {
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.entry {
+	background: #999;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.rating {
+	background: #ccc;
+	text-align: center;
+}
