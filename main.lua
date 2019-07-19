@@ -82,7 +82,7 @@ function render_head(head_img)
 end
 
 function love.load(args)
-	if args then
+	if args and #args > 0 then
 		local filename, outfile = unpack(args)
 		local head_img = love.graphics.newImage(filename)
 		if not head_img then
@@ -103,26 +103,32 @@ function love.load(args)
 				outfile:close()
 			end
 
-			--exit (batch job)
+			--exit (this was a single batch job)
 			love.event.quit()
 		end
 
 		global_result = result_img
 	end
-
-	--love.event.quit()
 end
 
 function love.draw()
-	global_result:setFilter("nearest", "nearest")
-	love.graphics.origin()
-	love.graphics.draw(
-		global_result,
-		love.graphics.getWidth() * 0.5, love.graphics.getHeight() * 0.5,
-		0,
-		2, 2,
-		global_result:getWidth() * 0.5, global_result:getHeight() * 0.5
-	)
+	if global_result then
+		global_result:setFilter("nearest", "nearest")
+		love.graphics.origin()
+		love.graphics.draw(
+			global_result,
+			love.graphics.getWidth() * 0.5, love.graphics.getHeight() * 0.5,
+			0,
+			2, 2,
+			global_result:getWidth() * 0.5, global_result:getHeight() * 0.5
+		)
+	else
+		love.graphics.printf(
+			"Drag and drop a kag custom head image file onto the app window to test it!",
+			0, love.graphics.getHeight() * 0.5 - 10,
+			love.graphics.getWidth(), "center"
+		)
+	end
 end
 
 function love.filedropped(file)
