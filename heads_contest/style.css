@@ -5,6 +5,7 @@ body {
 
 img {
 	width: 576px;
+	image-rendering: pixelated;
 	image-rendering: crisp-edges;
 }
 
